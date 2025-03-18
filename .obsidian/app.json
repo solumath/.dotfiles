@@ -1,0 +1,12 @@
+{
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "newLinkFormat": "relative",
+  "promptDelete": true,
+  "readableLineLength": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "drafts",
+  "attachmentFolderPath": "./"
+}

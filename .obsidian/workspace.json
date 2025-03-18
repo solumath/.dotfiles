@@ -1,0 +1,294 @@
+{
+  "main": {
+    "id": "0b7014bec4318516",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd8bc169afdb9c5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e105ff0922fc97f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Red Hat/Tasks/2025 Q1/Chores.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Chores"
+            }
+          },
+          {
+            "id": "ce45ebda0d179797",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily notes/2025-03-18.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-03-18"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9d641819c6aa1170",
+    "type": "split",
+    "children": [
+      {
+        "id": "10a78d03640ed087",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "790160fa39ba3119",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "58bae3305a950898",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cfadf01cc445ad03",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327.5
+  },
+  "right": {
+    "id": "e8550fd609631dfe",
+    "type": "split",
+    "children": [
+      {
+        "id": "25c9e92f155c8ea9",
+        "type": "tabs",
+        "dimension": 59.26640926640926,
+        "children": [
+          {
+            "id": "c2bb1b9d6c9e0c06",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Tech and Programming/Operating systems/Fixes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Fixes"
+            }
+          },
+          {
+            "id": "63529857efefbc5f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Tech and Programming/Operating systems/Fixes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Fixes"
+            }
+          },
+          {
+            "id": "e915e57138086690",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "09aa3629c345dcb9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Daily notes/2025-03-18.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2025-03-18"
+            }
+          },
+          {
+            "id": "0166cc5f16ff8998",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "bb5ddf6b5440fc1b",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "134cb659ab4fe76e",
+            "type": "leaf",
+            "state": {
+              "type": "SC-custom-variables-view",
+              "state": {},
+              "icon": "code-glyph",
+              "title": "Shell commands: Custom variables"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "b518695ea6e8a0b5",
+        "type": "tabs",
+        "dimension": 40.73359073359073,
+        "children": [
+          {
+            "id": "9c8ad27e5d2136ab",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 403.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": false,
+      "omnisearch:Omnisearch": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "ce45ebda0d179797",
+  "lastOpenFiles": [
+    "checklist.png",
+    "Red Hat/Tasks.md",
+    "Red Hat/Tasks/2025 Q1/Chores.md",
+    "Blog/posts/003-setting-up-blog/index.md",
+    "Blog/Summary.md",
+    "Red Hat/Tasks/2025 Q1/readOnlyRootFilesystem.md",
+    "Red Hat/Tasks/2025 Q1/Remove webhook.md",
+    "Red Hat/OpenShift/Testing.md",
+    "Daily notes/2025-03-18.md",
+    "Daily notes/2025-03-17.md",
+    "Daily notes/2025-03-16.md",
+    "Daily notes/2025-03-15.md",
+    "Daily notes/2025-03-14.md",
+    "Daily notes/2025-03-13.md",
+    "Daily notes/2025-03-12.md",
+    "Blog/posts/002-my-obsidian-setup/index.md",
+    "Red Hat/OpenShift/VolumeAttributesClass.md",
+    "Red Hat/Tasks/2025 Q1/GCP-PD hyperdisk RWX support.md",
+    "Red Hat/Tasks/2025 Q1/VolumeAttributesClass demo.md",
+    "Projects/Drafts/Sauna.md",
+    "Templates/blog_template.md",
+    "Templates/basic_template.md",
+    "Red Hat/OpenShift/Chores/rebase/rebase.md",
+    "Red Hat/OpenShift/Backporting.md",
+    "Red Hat/Tasks/2025 Q1/Reviews.md",
+    "Red Hat/OpenShift/Commands.md",
+    "Finance",
+    "Projects/WIP",
+    "Projects/Done",
+    "Projects/Drafts",
+    "Daily notes/2025-02-19.png",
+    "Daily notes/2025-02-28.png",
+    "Adobe Scan Mar 09, 2025.pdf",
+    "Red Hat/OpenShift/Storage_wiki/Accessing-CCX",
+    "Red Hat/Tasks/2025 Q1",
+    "Blog/posts/003-setting-up-blog/featured.jpg",
+    "Blog/posts/003-setting-up-blog/images/github-pages-settings.png",
+    "Blog/posts/003-setting-up-blog/images/github-new-repo.png",
+    "Projects",
+    "Red Hat/Tasks",
+    "Tech and Programming/Grafana",
+    "Micha_Gorelick__Ian_Ozsvald_-_High_Performance_Python__Practical_Performant_Programming_for_Humans_2020_OReilly_Media_Inc._-_libgen.li-1/images/hpp2_1203.png",
+    "Micha_Gorelick__Ian_Ozsvald_-_High_Performance_Python__Practical_Performant_Programming_for_Humans_2020_OReilly_Media_Inc._-_libgen.li-1/images/hpp2_1202.png",
+    "Micha_Gorelick__Ian_Ozsvald_-_High_Performance_Python__Practical_Performant_Programming_for_Humans_2020_OReilly_Media_Inc._-_libgen.li-1/images/hpp2_1201.png",
+    "Micha_Gorelick__Ian_Ozsvald_-_High_Performance_Python__Practical_Performant_Programming_for_Humans_2020_OReilly_Media_Inc._-_libgen.li-1/images/hpp2_1110.png",
+    "Micha_Gorelick__Ian_Ozsvald_-_High_Performance_Python__Practical_Performant_Programming_for_Humans_2020_OReilly_Media_Inc._-_libgen.li-1/images/hpp2_1109.png",
+    "Untitled.canvas"
+  ]
+}

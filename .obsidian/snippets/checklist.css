@@ -1,0 +1,22 @@
+/* Callouts & Checkboxes Reminder - Hover your mouse over the ? icon in the bottom-left, next to the settings cog icon, to show an image displaying the different callouts and checkboxes. Made by https://www.reddit.com/user/Content_Trouble_/. Detailed instructions here:
+https://www.reddit.com/r/ObsidianMD/comments/1fxiirm/kept_forgetting_my_callouts_and_checkboxes_so_i/ */
+
+.workspace-drawer-vault-actions .clickable-icon {
+    position: relative; /* Establishes a positioning context */
+}
+
+.workspace-drawer-vault-actions .clickable-icon:nth-of-type(1):hover::before {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    content: ""; 
+    width: 370px;
+    height: 762px;
+    border-radius: 10px; /* Rounded corners */
+    background: url('https://github.com/solumath/dotfiles/blob/main/.obsidian/snippets/checklist.png?raw=true');
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.75); /* Shadow outline */
+    top: -762px; /* Take your image's width in pixels and write it as the top value as a negative */
+    left: 20px; /* Keep the left position at the cursor */
+}

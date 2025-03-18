@@ -1,0 +1,13 @@
+{
+  "minimal-style@@h1-size": "1.75em",
+  "minimal-advanced@@cursor": "default",
+  "minimal-style@@h1-l": true,
+  "minimal-style@@h2-size": "1.25em",
+  "minimal-style@@active-line-on": true,
+  "minimal-style@@h1-color@@dark": "#FFFFFF",
+  "minimal-style@@minimal-unstyled-tags": false,
+  "minimal-style@@tag-radius": "14px",
+  "minimal-style@@table-tabular": false,
+  "minimal-style@@tag-border-width": "2px",
+  "minimal-style@@checkbox-shape": "checkbox-square"
+}
