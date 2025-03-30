@@ -1,0 +1,60 @@
+[user]
+	email = dfajmon@redhat.com
+	name = Daniel Fajmon
+	signingKey = ""
+[core]
+	editor = nano
+	sshCommand = ssh -i ~/.ssh/id_ed25519
+	excludesfile = ~/.gitignore
+[gpg]
+	program = gpg
+	format = openpgp
+[commit]
+	gpgSign = false
+	verbose = true
+[tag]
+	forceSignAnnotated = false
+	sort = version:refname
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[init]
+	defaultBranch = main
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ""
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[includeIf "gitdir:~/solumath/"]
+    path = ~/solumath/.gitconfig_solumath
+[includeIf "gitdir:~/openshift/"]
+    path = ~/openshift/.gitconfig_dfajmon
+[includeIf "gitdir:~/kubernetes/"]
+    path = ~/kubernetes/.gitconfig_dfajmon
+[alias]
+	st = status -uno
+	dif = diff
+	tree = log --pretty=oneline --abbrev-commit --graph --decorate
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	sync = "!f() { git checkout $(git remote show origin | grep 'HEAD branch' | awk '{print $3}') && git fetch upstream && git pull upstream $(git remote show upstream | grep 'HEAD branch' | awk '{print $3}') && git push; }; f"
+	del = "!f() { git branch -D $1 && git push origin --delete $1; git fetch --all --prune; }; f"

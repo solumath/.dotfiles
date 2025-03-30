@@ -1,0 +1,5 @@
+[user]
+	email = dfajmon@redhat.com
+	name = Daniel Fajmon
+[core]
+	sshCommand = ssh -i ~/.ssh/id_ed25519

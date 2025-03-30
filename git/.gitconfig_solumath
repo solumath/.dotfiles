@@ -1,0 +1,5 @@
+[user]
+    email = solumath99@gmail.com
+    name = Solumath
+[core]
+    sshCommand = ssh -i ~/.ssh/github_solumath
