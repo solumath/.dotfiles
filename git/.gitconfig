@@ -21,6 +21,8 @@
 	sort = -committerdate
 [init]
 	defaultBranch = main
+[checkout]
+	defaultRemote = origin
 [diff]
 	algorithm = histogram
 	colorMoved = plain
@@ -34,6 +36,8 @@
 	prune = true
 	pruneTags = true
 	all = true
+[pull]
+	rebase = true
 [rebase]
 	autoSquash = true
 	autoStash = true
@@ -47,14 +51,24 @@
 	helper = !/usr/bin/gh auth git-credential
 [includeIf "gitdir:~/solumath/"]
     path = ~/solumath/.gitconfig_solumath
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/solumath/.gitconfig_solumath
 [includeIf "gitdir:~/openshift/"]
     path = ~/openshift/.gitconfig_dfajmon
 [includeIf "gitdir:~/kubernetes/"]
     path = ~/kubernetes/.gitconfig_dfajmon
 [alias]
-	st = status -uno
+	st = status -u
+	df = diff --color --color-words --abbrev
 	dif = diff
-	tree = log --pretty=oneline --abbrev-commit --graph --decorate
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	# <date> <sha1> (<ref names>) <author> <title>
+	tree = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %C(bold black)[%aN]%Creset %s' --date=format-local:'%Y-%m-%d %H:%M'
 	sync = "!f() { git checkout $(git remote show origin | grep 'HEAD branch' | awk '{print $3}') && git fetch upstream && git pull upstream $(git remote show upstream | grep 'HEAD branch' | awk '{print $3}') && git push; }; f"
-	del = "!f() { git branch -D $1 && git push origin --delete $1; git fetch --all --prune; }; f"
+	del = !"git branch -D $1 && git push origin --delete $1; git fetch --all --prune"
+	c = commit -am
+	fpush = push --force
+	cp = cherry-pick
+	cherrypick = cherry-pick
+	amend = commit --amend --all --no-edit
+	sreset = !"git reset --soft $3"
+	hreset = !"git reset --hard $3"

@@ -70,7 +70,9 @@ DISABLE_LS_COLORS="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HISTSIZE=100000000
+SAVEHIST=100000000
+HIST_STAMPS="%d/%m/%Y %T"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -80,8 +82,19 @@ DISABLE_LS_COLORS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting ssh-agent)
+plugins=(
+  git
+  zsh-autocomplete
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  ssh-agent
+  zsh-fzf-history-search
+)
 
+# Create folder and move zcompdump files to cache directory
+# Must be done before sourcing oh-my-zsh.sh
+mkdir -p "$HOME/.cache/zsh"
+ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -106,8 +119,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
 alias k="kubectl"
+
+if command -v kwallet-query > /dev/null 2>&1; then
+  alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
+  export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -119,11 +136,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export ZSH_CUSTOM="${HOME}/.dotfiles/zsh/custom"
 
-export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
+bindkey '^H' backward-kill-word       # Ctrl+Backspace removes the word before the cursor
+bindkey '5~' kill-word                # Ctrl+Delete removes the word after the cursor
+bindkey '^I' menu-complete            # Tab key for completion
+bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 
-# enable ctrl+backspace and ctrl+delete do remove word in terminal
-bindkey '^H' backward-kill-word
-bindkey '5~' kill-word
-
-eval "$(gimme 1.23.4)" > /dev/null 2>&1
+if command -v gimme > /dev/null 2>&1; then
+  eval "$(gimme 1.24.2)" > /dev/null 2>&1
+fi
