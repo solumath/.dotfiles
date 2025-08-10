@@ -2,6 +2,15 @@
 set -e
 set -u
 
+if [ -d ~/.dotfiles ]; then
+    read -p "The ~/.dotfiles directory already exists. Do you want to replace it? (y/n) " choice
+    case "$choice" in
+        y|Y ) rm -rf ~/.dotfiles ;;
+        n|N ) exit 1 ;;
+        * ) echo "Invalid choice. Exiting." ; exit 1 ;;
+    esac
+fi
+
 git clone https://github.com/solumath/.dotfiles.git ~/.dotfiles
 
 if [ -d ~/solumath ]; then
