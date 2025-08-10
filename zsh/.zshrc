@@ -37,6 +37,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Add specific ssh keys to agent
 zstyle :omz:plugins:ssh-agent identities id_ed25519 github_solumath
+zstyle ':autocomplete:*' delay 0.15
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -45,7 +46,7 @@ zstyle :omz:plugins:ssh-agent identities id_ed25519 github_solumath
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
-DISABLE_LS_COLORS="true"
+# DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -95,6 +96,7 @@ plugins=(
 # Must be done before sourcing oh-my-zsh.sh
 mkdir -p "$HOME/.cache/zsh"
 ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
