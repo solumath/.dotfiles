@@ -13,18 +13,6 @@ fi
 
 git clone https://github.com/solumath/.dotfiles.git ~/.dotfiles
 
-if [ -d ~/solumath ]; then
-    ln -sf $(realpath ~/.dotfiles/git/.gitconfig_solumath) ~/solumath/
-fi
-
-if [ -d ~/openshift ]; then
-    ln -sf $(realpath ~/.dotfiles/git/.gitconfig_dfajmon) ~/openshift/
-fi
-
-if [ -d ~/kubernetes ]; then
-    ln -sf $(realpath ~/.dotfiles/git/.gitconfig_dfajmon) ~/kubernetes/
-fi
-
 ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
 ln -sf $(realpath ~/.dotfiles/zsh/.zshrc) ~/.zshrc
 ln -sf $(realpath ~/.dotfiles/zsh/.p10k.zsh) ~/.p10k.zsh

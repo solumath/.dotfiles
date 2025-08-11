@@ -50,13 +50,13 @@
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [includeIf "gitdir:~/solumath/"]
-    path = ~/solumath/.gitconfig_solumath
+    path = ~/.dotfiles/git/.gitconfig_solumath
 [includeIf "gitdir:~/.dotfiles/"]
-    path = ~/solumath/.gitconfig_solumath
+    path = ~/.dotfiles/git/.gitconfig_solumath
 [includeIf "gitdir:~/openshift/"]
-    path = ~/openshift/.gitconfig_dfajmon
+    path = ~/.dotfiles/git/.gitconfig_dfajmon
 [includeIf "gitdir:~/kubernetes/"]
-    path = ~/kubernetes/.gitconfig_dfajmon
+    path = ~/.dotfiles/git/.gitconfig_dfajmon
 [alias]
 	st = status -u
 	df = diff --color --color-words --abbrev
