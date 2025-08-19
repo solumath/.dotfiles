@@ -17,10 +17,6 @@ ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
 ln -sf $(realpath ~/.dotfiles/zsh/.zshrc) ~/.zshrc
 ln -sf $(realpath ~/.dotfiles/zsh/.p10k.zsh) ~/.p10k.zsh
 
-# remove folder before linking it
-rm -rf ~/.oh-my-zsh/custom
-ln -sf $(realpath ~/.dotfiles/zsh/custom/) ~/.oh-my-zsh/
-
 # Initialize plugins and themes
 cd ~/.dotfiles
 git submodule update --init --recursive
