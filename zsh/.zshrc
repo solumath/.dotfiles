@@ -16,6 +16,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_CUSTOM="${HOME}/.dotfiles/zsh/custom"
+# Create folder and move zcompdump files to cache directory
+# Must be done before sourcing oh-my-zsh.sh
+mkdir -p "$HOME/.cache/zsh"
+ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -92,11 +97,6 @@ plugins=(
   zsh-fzf-history-search
 )
 
-# Create folder and move zcompdump files to cache directory
-# Must be done before sourcing oh-my-zsh.sh
-mkdir -p "$HOME/.cache/zsh"
-ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -122,6 +122,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 alias k="kubectl"
+alias config_update="git -C ${HOME}/.dotfiles pull && exec zsh"
 
 if command -v kwallet-query > /dev/null 2>&1; then
   alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
@@ -138,7 +139,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export ZSH_CUSTOM="${HOME}/.dotfiles/zsh/custom"
 
 bindkey '^H' backward-kill-word       # Ctrl+Backspace removes the word before the cursor
 bindkey '5~' kill-word                # Ctrl+Delete removes the word after the cursor
