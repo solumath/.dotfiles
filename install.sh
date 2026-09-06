@@ -46,6 +46,11 @@ fi
 git clone https://github.com/solumath/.dotfiles.git ~/.dotfiles
 git -C ~/.dotfiles submodule update --init --recursive
 
+# Install fonts
+mkdir -p ~/.local/share/fonts
+ln -sf $(realpath ~/.dotfiles/fonts/MesloNerdFont) ~/.local/share/fonts/MesloNerdFont
+fc-cache -f ~/.local/share/fonts
+
 mkdir -p ~/.config/lazygit
 ln -sf $(realpath ~/.dotfiles/lazygit/config.yml) ~/.config/lazygit/config.yml
 ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
