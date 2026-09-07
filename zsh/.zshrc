@@ -128,12 +128,7 @@ alias dc="docker compose"
 alias dcrebuild="docker compose down && docker compose up --build -d"
 alias dclogs="docker compose logs -ft"
 alias n="nvim"
-
-# Work setup
-# if command -v kwallet-query > /dev/null 2>&1; then
-  # alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
-  # export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
-# fi
+alias gt="g tree"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
