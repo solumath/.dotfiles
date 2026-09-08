@@ -3,7 +3,7 @@
 	name = Daniel Fajmon
 	signingKey = ""
 [core]
-	editor = nano
+	editor = nvim
 	sshCommand = ssh -i ~/.ssh/id_ed25519
 	excludesfile = ~/.gitignore_global
 [gpg]
