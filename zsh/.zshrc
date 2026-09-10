@@ -127,6 +127,7 @@ alias k="kubectl"
 alias config_update="git -C $DOTFILES pull && exec zsh"
 alias config_push="git -C $DOTFILES add . && git -C $DOTFILES commit -m 'Update dotfiles' && git -C $DOTFILES push"
 alias d="docker"
+alias dp='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.CreatedAt}}\t{{.Status}}" | column -t -s $'\''\t'\'''
 alias dc="docker compose"
 alias dcrebuild="docker compose down && docker compose up --build -d"
 alias dclogs="docker compose logs -ft"
