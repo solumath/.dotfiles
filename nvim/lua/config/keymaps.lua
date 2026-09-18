@@ -15,7 +15,7 @@ vim.keymap.set("v", "<C-S-{>", "gc", { remap = true, desc = "Toggle Comment" })
 -- Delete word backward/forward in Insert Mode
 vim.keymap.set("i", "<C-Delete>", "<C-o>de", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
-vim.keymap.set("i", "<C-H>", "<C-w>", { noremap = true, silent = true }) -- backward compat alias
+vim.keymap.set("i", "<C-H>", "<C-w>", { noremap = true, silent = true })
 
 -- Jump words forward/backward in Insert Mode
 vim.keymap.set("i", "<C-Left>", "<C-o>b", { noremap = true })
@@ -24,6 +24,12 @@ vim.keymap.set("i", "<C-Right>", "<C-o>w", { noremap = true })
 -- Also useful for Normal Mode if you prefer the arrows
 vim.keymap.set("n", "<C-Left>", "b", { noremap = true })
 vim.keymap.set("n", "<C-Right>", "w", { noremap = true })
+
+-- Fallback: raw escape sequences sent by some terminals (e.g. Debian 13 / xterm)
+vim.keymap.set("i", "<Esc>OD", "<C-o>b", { noremap = true, silent = true })
+vim.keymap.set("i", "<Esc>OC", "<C-o>w", { noremap = true, silent = true })
+vim.keymap.set("n", "<Esc>OD", "b", { noremap = true, silent = true })
+vim.keymap.set("n", "<Esc>OC", "w", { noremap = true, silent = true })
 
 -- VSCode-style rename
 vim.keymap.set({ "n", "i" }, "<F2>", vim.lsp.buf.rename, { desc = "Rename" })

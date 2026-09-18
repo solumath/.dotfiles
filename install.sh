@@ -2,20 +2,21 @@
 set -e
 set -u
 
-PACKAGES="git gh zsh curl fastfetch btop ffmpeg fzf lazygit"
+PACKAGES="git gh zsh curl fastfetch btop ffmpeg fzf"
+APT_PACKAGES="$PACKAGES lazygit"
+LAZYGIT_FAILED=""
 
 # Detect package manager and install
 if command -v dnf >/dev/null 2>&1; then
-  # shellcheck disable=SC2086
   sudo dnf install -y $PACKAGES --exclude=lazygit
-  sudo dnf copr enable -y dejan/lazygit
-  sudo dnf install -y lazygit
+  if ! { sudo dnf copr enable -y dejan/lazygit && sudo dnf install -y lazygit; }; then
+    LAZYGIT_FAILED=1
+  fi
 elif command -v apt >/dev/null 2>&1; then
   sudo apt update
-  # shellcheck disable=SC2086
-  sudo apt install -y $PACKAGES
+  sudo apt install -y $APT_PACKAGES
 else
-  echo "Unsupported package manager. Install manually: $PACKAGES"
+  echo "Unsupported package manager. Install manually: $APT_PACKAGES"
   exit 1
 fi
 
@@ -75,5 +76,9 @@ done
 
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
+
+if [ -n "$LAZYGIT_FAILED" ]; then
+  printf "\e[33mWarning: lazygit install failed. Install it manually.\e[0m\n"
+fi
 
 printf "Done! Run \e[32mexec zsh\e[0m to apply changes.\n"
